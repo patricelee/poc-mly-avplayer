@@ -1,0 +1,5 @@
+included:
+  - MLYSDK
+  - ../Sources/MLYSDK/classes
+excluded:
+  - Pods

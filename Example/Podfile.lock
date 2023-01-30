@@ -1,0 +1,72 @@
+PODS:
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - MLYSDK (0.1.0):
+    - GCDWebServer (~> 3.5.4)
+    - Mux-Stats-AVPlayer (~> 3.1.0)
+    - Sentry (~> 7.31.3)
+    - SwiftCentrifuge
+    - SwiftEventBus
+  - Mux-Stats-AVPlayer (3.1.0):
+    - Mux-Stats-Core (~> 4.2)
+  - Mux-Stats-Core (4.2.0)
+  - Sentry (7.31.3):
+    - Sentry/Core (= 7.31.3)
+  - Sentry/Core (7.31.3)
+  - SnapKit (5.6.0)
+  - SwiftCentrifuge (0.5.5):
+    - SwiftProtobuf
+  - SwiftEventBus (5.0.0)
+  - SwiftProtobuf (1.20.3)
+
+DEPENDENCIES:
+  - GCDWebServer (~> 3.5.4)
+  - MLYSDK (from `../`)
+  - Mux-Stats-AVPlayer (~> 3.1.0)
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.31.3`)
+  - SnapKit (~> 5.6.0)
+  - SwiftCentrifuge (~> 0.5.5)
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`, tag `5.1.0`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GCDWebServer
+    - Mux-Stats-AVPlayer
+    - Mux-Stats-Core
+    - SnapKit
+    - SwiftCentrifuge
+    - SwiftProtobuf
+
+EXTERNAL SOURCES:
+  MLYSDK:
+    :path: "../"
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.31.3
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 5.1.0
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.31.3
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 5.1.0
+
+SPEC CHECKSUMS:
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  MLYSDK: 4e9c8a0012f84da0df260c7a6c26ed5930eaa4c8
+  Mux-Stats-AVPlayer: 669b2454e52700623f2ee89397cb77b1885ce600
+  Mux-Stats-Core: 7ea0bed4685c18d7a77119be68b8adc776840d25
+  Sentry: 08884c523575ec0f6690d94ed3ccb0246a1600bf
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftCentrifuge: 8b765b93b58a22b646eb8eb2ff6f3e8acf1c0480
+  SwiftEventBus: 976fdca8270b925c5f8e897f519cc49597e1f13c
+  SwiftProtobuf: b02b5075dcf60c9f5f403000b3b0c202a11b6ae1
+
+PODFILE CHECKSUM: 93e7c21b01840266a54bd70849139e9c866cc4dd
+
+COCOAPODS: 1.11.3

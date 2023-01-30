@@ -1,0 +1,55 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MLYSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import CommonCrypto
+import CryptoKit
+import Foundation
+import GCDWebServer
+@_exported import MLYSDK
+import MUXSDKStats
+import Sentry
+import Swift
+import SwiftCentrifuge
+import SwiftEventBus
+import _Concurrency
+import _StringProcessing
+public enum MLYAVPlayerPlugin {
+  public static func adapt(playerLayer: AVFoundation.AVPlayerLayer? = nil, playerViewController: AVKit.AVPlayerViewController? = nil)
+}
+public class MLYAVPlayerAdapter {
+  public init(playerLayer: AVFoundation.AVPlayerLayer? = nil, playerViewController: AVKit.AVPlayerViewController? = nil)
+  @objc deinit
+}
+public class MLYDriverOptions {
+  public var client: MLYSDK.MLYClientOptions
+  public init()
+  @objc deinit
+}
+public struct MLYClientOptions {
+  public var id: Swift.String?
+  public var key: Swift.String?
+}
+public class MLYDriver {
+  public init()
+  public static func initialize(options: MLYSDK.MLYDriverOptions?) throws
+  public static func activate() throws
+  public static func deactivate()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProxyURLModifier {
+  public static func replace(_ url: Swift.String) throws -> Foundation.URL
+  @objc deinit
+}
+public enum ProxyURLModifierError : Swift.Error {
+  case IllegalURLFormat
+  public static func == (a: MLYSDK.ProxyURLModifierError, b: MLYSDK.ProxyURLModifierError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension MLYSDK.ProxyURLModifierError : Swift.Equatable {}
+extension MLYSDK.ProxyURLModifierError : Swift.Hashable {}

@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '14.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'MLYSDK_Example' do
+  pod 'MLYSDK', :path => '../'
+  pod 'GCDWebServer', '~> 3.5.4'
+  pod 'Mux-Stats-AVPlayer', '~> 3.1.0'
+  pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '7.31.3'
+  pod 'SwiftCentrifuge', '~> 0.5.5'
+  pod 'SwiftEventBus', :git => 'https://github.com/cesarferreira/SwiftEventBus.git', :tag => '5.1.0'
+  pod 'SnapKit', '~> 5.6.0'
+#  pod "WebRTC"
+end
