@@ -29,7 +29,6 @@ let playerLayer = AVPlayerLayer(player: player)
 playerLayer.videoGravity = .resizeAspect
 playerLayer.frame = view.bounds
 self.view.layer.addSublayer(playerLayer)
-}     
 ``` 
 
 ### 2 - init  ###
