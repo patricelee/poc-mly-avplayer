@@ -72,7 +72,7 @@ func playVideo() {
 
 ## Author
 
-vipweiqi.com
+119390052, benson@letron.tech
 
 ## License
 
