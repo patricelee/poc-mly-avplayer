@@ -575,13 +575,6 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftEventBus",
-        "printedName": "SwiftEventBus",
-        "declKind": "Import",
-        "moduleName": "MLYSDK"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
