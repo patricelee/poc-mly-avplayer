@@ -19,6 +19,12 @@ it, simply add the following line to your Podfile:
 pod 'MLYSDK' 
 ```
 
+or
+
+```bash
+pod 'MLYSDK',:git => 'https://github.com/patricelee/poc-mly-avplayer.git'
+```
+
 ## Usage
 
 ### 1 - Prepare  ###
