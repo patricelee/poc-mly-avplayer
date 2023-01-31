@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MLYSDK'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of MLYSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -45,8 +45,5 @@ TODO: Add long description of the pod here.
   s.dependency 'Mux-Stats-AVPlayer', '~> 3.1.0'
   s.dependency 'GCDWebServer', '~> 3.5.4'
   s.dependency 'Sentry', '~> 7.31.3'
-  s.dependency 'SwiftCentrifuge'
-  s.dependency 'SwiftEventBus'
-#  s.dependency 'WebRTC'
   
 end

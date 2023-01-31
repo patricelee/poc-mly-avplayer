@@ -246,24 +246,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MLYSDK_Example/Pods-MLYSDK_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
-				"${BUILT_PRODUCTS_DIR}/MLYSDK/MLYSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCentrifuge/SwiftCentrifuge.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/MLYSDK/MLYSDK.framework/MLYSDK",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-AVPlayer/MUXSDKStats.framework/MUXSDKStats",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-Core/MuxCore.framework/MuxCore",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLYSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCentrifuge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLYSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MUXSDKStats.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MuxCore.framework",
 			);

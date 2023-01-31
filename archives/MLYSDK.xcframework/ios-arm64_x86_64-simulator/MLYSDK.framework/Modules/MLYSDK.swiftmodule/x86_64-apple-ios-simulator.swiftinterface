@@ -12,7 +12,6 @@ import GCDWebServer
 import MUXSDKStats
 import Sentry
 import Swift
-import SwiftCentrifuge
 import SwiftEventBus
 import _Concurrency
 import _StringProcessing
