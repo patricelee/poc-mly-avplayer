@@ -1,0 +1,11 @@
+framework module MLYSDK {
+  umbrella header "MLYSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MLYSDK.Swift {
+  header "MLYSDK-Swift.h"
+  requires objc
+}

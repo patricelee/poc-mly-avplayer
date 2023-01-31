@@ -1,0 +1,319 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SwiftCentrifuge
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CommonCrypto
+import CoreFoundation
+import Foundation
+import Security
+import Swift
+@_exported import SwiftCentrifuge
+import SwiftProtobuf
+import _Concurrency
+import _StringProcessing
+import zlib
+public enum CentrifugeError : Swift.Error {
+  case timeout
+  case duplicateSub
+  case clientDisconnected
+  case subscriptionUnsubscribed
+  case transportError(error: Swift.Error)
+  case tokenError(error: Swift.Error)
+  case connectError(error: Swift.Error)
+  case refreshError(error: Swift.Error)
+  case subscriptionSubscribeError(error: Swift.Error)
+  case subscriptionTokenError(error: Swift.Error)
+  case subscriptionRefreshError(error: Swift.Error)
+  case replyError(code: Swift.UInt32, message: Swift.String, temporary: Swift.Bool)
+}
+public protocol CentrifugeConnectionTokenGetter {
+  func getConnectionToken(_ event: SwiftCentrifuge.CentrifugeConnectionTokenEvent, completion: @escaping (Swift.Result<Swift.String, Swift.Error>) -> ())
+}
+public struct CentrifugeClientConfig {
+  public init(timeout: Swift.Double = 5.0, headers: [Swift.String : Swift.String] = [String:String](), tlsSkipVerify: Swift.Bool = false, minReconnectDelay: Swift.Double = 0.5, maxReconnectDelay: Swift.Double = 20.0, maxServerPingDelay: Swift.Double = 10.0, name: Swift.String = "swift", version: Swift.String = "", token: Swift.String? = nil, data: Foundation.Data? = nil, debug: Swift.Bool = false, tokenGetter: SwiftCentrifuge.CentrifugeConnectionTokenGetter? = nil, logger: SwiftCentrifuge.CentrifugeLogger? = nil)
+  public var timeout: Swift.Double
+  public var headers: [Swift.String : Swift.String]
+  public var tlsSkipVerify: Swift.Bool
+  public var minReconnectDelay: Swift.Double
+  public var maxReconnectDelay: Swift.Double
+  public var maxServerPingDelay: Swift.Double
+  public var name: Swift.String
+  public var version: Swift.String
+  public var token: Swift.String?
+  public var data: Foundation.Data?
+  public var debug: Swift.Bool
+  public var tokenGetter: SwiftCentrifuge.CentrifugeConnectionTokenGetter?
+  public var logger: SwiftCentrifuge.CentrifugeLogger?
+}
+public enum CentrifugeClientState {
+  case disconnected
+  case connecting
+  case connected
+  public static func == (a: SwiftCentrifuge.CentrifugeClientState, b: SwiftCentrifuge.CentrifugeClientState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class CentrifugeClient {
+  weak public var delegate: SwiftCentrifuge.CentrifugeClientDelegate?
+  public var state: SwiftCentrifuge.CentrifugeClientState {
+    get
+    set(newState)
+  }
+  public init(endpoint: Swift.String, config: SwiftCentrifuge.CentrifugeClientConfig, delegate: SwiftCentrifuge.CentrifugeClientDelegate? = nil)
+  public func connect()
+  public func disconnect()
+  public func newSubscription(channel: Swift.String, delegate: SwiftCentrifuge.CentrifugeSubscriptionDelegate, config: SwiftCentrifuge.CentrifugeSubscriptionConfig? = nil) throws -> SwiftCentrifuge.CentrifugeSubscription
+  public func getSubscription(channel: Swift.String) -> SwiftCentrifuge.CentrifugeSubscription?
+  public func removeSubscription(_ sub: SwiftCentrifuge.CentrifugeSubscription)
+  public func getSubscriptions() -> [Swift.String : SwiftCentrifuge.CentrifugeSubscription]
+  public func send(data: Foundation.Data, completion: @escaping (Swift.Error?) -> ())
+  public func publish(channel: Swift.String, data: Foundation.Data, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePublishResult, Swift.Error>) -> ())
+  public func rpc(method: Swift.String, data: Foundation.Data, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugeRpcResult, Swift.Error>) -> ())
+  public func presence(channel: Swift.String, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePresenceResult, Swift.Error>) -> ())
+  public func presenceStats(channel: Swift.String, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePresenceStatsResult, Swift.Error>) -> ())
+  public func history(channel: Swift.String, limit: Swift.Int32 = 0, since: SwiftCentrifuge.CentrifugeStreamPosition? = nil, reverse: Swift.Bool = false, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugeHistoryResult, Swift.Error>) -> ())
+  @objc deinit
+}
+public struct CentrifugeConnectedEvent {
+  public var client: Swift.String
+  public var data: Foundation.Data?
+}
+public struct CentrifugeDisconnectedEvent {
+  public var code: Swift.UInt32
+  public var reason: Swift.String
+}
+public struct CentrifugeConnectingEvent {
+  public var code: Swift.UInt32
+  public var reason: Swift.String
+}
+public struct CentrifugeConnectionTokenEvent {
+}
+public struct CentrifugeJoinEvent {
+  public var client: Swift.String
+  public var user: Swift.String
+  public var connInfo: Foundation.Data
+  public var chanInfo: Foundation.Data
+}
+public struct CentrifugeLeaveEvent {
+  public var client: Swift.String
+  public var user: Swift.String
+  public var connInfo: Foundation.Data
+  public var chanInfo: Foundation.Data
+}
+public struct CentrifugeMessageEvent {
+  public var data: Foundation.Data
+}
+public struct CentrifugeErrorEvent {
+  public var error: Swift.Error
+}
+public struct CentrifugePublicationEvent {
+  public var data: Foundation.Data
+  public var offset: Swift.UInt64
+  public var tags: [Swift.String : Swift.String]
+}
+public struct CentrifugeSubscriptionTokenEvent {
+  public var channel: Swift.String
+}
+public struct CentrifugeSubscriptionErrorEvent {
+  public var error: Swift.Error
+}
+public struct CentrifugeSubscribedEvent {
+  public var wasRecovering: Swift.Bool
+  public var recovered: Swift.Bool
+  public var positioned: Swift.Bool
+  public var recoverable: Swift.Bool
+  public var streamPosition: SwiftCentrifuge.StreamPosition?
+  public var data: Foundation.Data?
+}
+public struct CentrifugeUnsubscribedEvent {
+  public var code: Swift.UInt32
+  public var reason: Swift.String
+}
+public struct CentrifugeSubscribingEvent {
+  public var code: Swift.UInt32
+  public var reason: Swift.String
+}
+public struct CentrifugeServerSubscribedEvent {
+  public var channel: Swift.String
+  public var wasRecovering: Swift.Bool
+  public var recovered: Swift.Bool
+  public var positioned: Swift.Bool
+  public var recoverable: Swift.Bool
+  public var streamPosition: SwiftCentrifuge.StreamPosition?
+  public var data: Foundation.Data?
+}
+public struct CentrifugeServerSubscribingEvent {
+  public var channel: Swift.String
+}
+public struct CentrifugeServerUnsubscribedEvent {
+  public var channel: Swift.String
+}
+public struct CentrifugeServerPublicationEvent {
+  public var channel: Swift.String
+  public var data: Foundation.Data
+  public var offset: Swift.UInt64
+  public var tags: [Swift.String : Swift.String]
+}
+public struct CentrifugeServerJoinEvent {
+  public var channel: Swift.String
+  public var client: Swift.String
+  public var user: Swift.String
+  public var connInfo: Foundation.Data?
+  public var chanInfo: Foundation.Data?
+}
+public struct CentrifugeServerLeaveEvent {
+  public var channel: Swift.String
+  public var client: Swift.String
+  public var user: Swift.String
+  public var connInfo: Foundation.Data?
+  public var chanInfo: Foundation.Data?
+}
+public protocol CentrifugeClientDelegate : AnyObject {
+  func onConnected(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeConnectedEvent)
+  func onDisconnected(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeDisconnectedEvent)
+  func onConnecting(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeConnectingEvent)
+  func onError(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeErrorEvent)
+  func onMessage(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeMessageEvent)
+  func onSubscribed(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerSubscribedEvent)
+  func onUnsubscribed(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerUnsubscribedEvent)
+  func onSubscribing(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerSubscribingEvent)
+  func onPublication(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerPublicationEvent)
+  func onJoin(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerJoinEvent)
+  func onLeave(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerLeaveEvent)
+}
+extension SwiftCentrifuge.CentrifugeClientDelegate {
+  public func onConnected(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeConnectedEvent)
+  public func onDisconnected(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeDisconnectedEvent)
+  public func onConnecting(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeConnectingEvent)
+  public func onError(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeErrorEvent)
+  public func onMessage(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeMessageEvent)
+  public func onSubscribed(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerSubscribedEvent)
+  public func onUnsubscribed(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerUnsubscribedEvent)
+  public func onSubscribing(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerSubscribingEvent)
+  public func onPublication(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerPublicationEvent)
+  public func onJoin(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerJoinEvent)
+  public func onLeave(_ client: SwiftCentrifuge.CentrifugeClient, _ event: SwiftCentrifuge.CentrifugeServerLeaveEvent)
+}
+public protocol CentrifugeSubscriptionDelegate : AnyObject {
+  func onSubscribed(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscribedEvent)
+  func onUnsubscribed(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeUnsubscribedEvent)
+  func onSubscribing(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscribingEvent)
+  func onError(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscriptionErrorEvent)
+  func onPublication(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugePublicationEvent)
+  func onJoin(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeJoinEvent)
+  func onLeave(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeLeaveEvent)
+}
+extension SwiftCentrifuge.CentrifugeSubscriptionDelegate {
+  public func onSubscribed(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscribedEvent)
+  public func onUnsubscribed(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeUnsubscribedEvent)
+  public func onSubscribing(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscribingEvent)
+  public func onError(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeSubscriptionErrorEvent)
+  public func onPublication(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugePublicationEvent)
+  public func onJoin(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeJoinEvent)
+  public func onLeave(_ sub: SwiftCentrifuge.CentrifugeSubscription, _ event: SwiftCentrifuge.CentrifugeLeaveEvent)
+}
+public struct StreamPosition {
+  public init(offset: Swift.UInt64 = 0, epoch: Swift.String = "")
+}
+public enum CentrifugeLoggerLevel {
+  case trace
+  case debug
+  case info
+  case warning
+  case error
+  public static func == (a: SwiftCentrifuge.CentrifugeLoggerLevel, b: SwiftCentrifuge.CentrifugeLoggerLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol CentrifugeLogger {
+  func log(level: SwiftCentrifuge.CentrifugeLoggerLevel, message: @autoclosure () -> Swift.String, file: Swift.StaticString, function: Swift.StaticString, line: Swift.UInt)
+}
+extension SwiftCentrifuge.CentrifugeLogger {
+  public func trace(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public func debug(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public func info(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public func warning(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public func error(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+}
+public protocol CentrifugeSubscriptionTokenGetter {
+  func getSubscriptionToken(_ event: SwiftCentrifuge.CentrifugeSubscriptionTokenEvent, completion: @escaping (Swift.Result<Swift.String, Swift.Error>) -> ())
+}
+public struct CentrifugeSubscriptionConfig {
+  public init(minResubscribeDelay: Swift.Double = 0.5, maxResubscribeDelay: Swift.Double = 20.0, token: Swift.String? = nil, data: Foundation.Data? = nil, since: SwiftCentrifuge.CentrifugeStreamPosition? = nil, positioned: Swift.Bool = false, recoverable: Swift.Bool = false, joinLeave: Swift.Bool = false, tokenGetter: SwiftCentrifuge.CentrifugeSubscriptionTokenGetter? = nil)
+  public var minResubscribeDelay: Swift.Double
+  public var maxResubscribeDelay: Swift.Double
+  public var token: Swift.String?
+  public var data: Foundation.Data?
+  public var since: SwiftCentrifuge.CentrifugeStreamPosition?
+  public var positioned: Swift.Bool
+  public var recoverable: Swift.Bool
+  public var joinLeave: Swift.Bool
+  public var tokenGetter: SwiftCentrifuge.CentrifugeSubscriptionTokenGetter?
+}
+public enum CentrifugeSubscriptionState {
+  case unsubscribed
+  case subscribing
+  case subscribed
+  public static func == (a: SwiftCentrifuge.CentrifugeSubscriptionState, b: SwiftCentrifuge.CentrifugeSubscriptionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class CentrifugeSubscription {
+  final public let channel: Swift.String
+  public var state: SwiftCentrifuge.CentrifugeSubscriptionState {
+    get
+    set(newState)
+  }
+  public func subscribe()
+  public func unsubscribe()
+  public func publish(data: Foundation.Data, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePublishResult, Swift.Error>) -> ())
+  public func presence(completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePresenceResult, Swift.Error>) -> ())
+  public func presenceStats(completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugePresenceStatsResult, Swift.Error>) -> ())
+  public func history(limit: Swift.Int32 = 0, since: SwiftCentrifuge.CentrifugeStreamPosition? = nil, reverse: Swift.Bool = false, completion: @escaping (Swift.Result<SwiftCentrifuge.CentrifugeHistoryResult, Swift.Error>) -> ())
+  @objc deinit
+}
+public struct CentrifugePublication {
+  public var offset: Swift.UInt64
+  public var data: Foundation.Data
+  public var clientInfo: SwiftCentrifuge.CentrifugeClientInfo?
+}
+public struct CentrifugeHistoryResult {
+  public var publications: [SwiftCentrifuge.CentrifugePublication]
+  public var offset: Swift.UInt64
+  public var epoch: Swift.String
+}
+public struct CentrifugeClientInfo {
+  public var client: Swift.String
+  public var user: Swift.String
+  public var connInfo: Foundation.Data
+  public var chanInfo: Foundation.Data
+}
+public struct CentrifugePublishResult {
+}
+public struct CentrifugeRpcResult {
+  public var data: Foundation.Data
+}
+public struct CentrifugePresenceResult {
+  public var presence: [Swift.String : SwiftCentrifuge.CentrifugeClientInfo]
+}
+public struct CentrifugePresenceStatsResult {
+  public var numClients: Swift.UInt32
+  public var numUsers: Swift.UInt32
+}
+public struct CentrifugeStreamPosition {
+  public init(offset: Swift.UInt64, epoch: Swift.String)
+  public var offset: Swift.UInt64
+  public var epoch: Swift.String
+}
+extension SwiftCentrifuge.CentrifugeClientState : Swift.Equatable {}
+extension SwiftCentrifuge.CentrifugeClientState : Swift.Hashable {}
+extension SwiftCentrifuge.CentrifugeLoggerLevel : Swift.Equatable {}
+extension SwiftCentrifuge.CentrifugeLoggerLevel : Swift.Hashable {}
+extension SwiftCentrifuge.CentrifugeSubscriptionState : Swift.Equatable {}
+extension SwiftCentrifuge.CentrifugeSubscriptionState : Swift.Hashable {}
