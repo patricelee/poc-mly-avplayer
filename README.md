@@ -1,6 +1,7 @@
 # poc-mly-avplayer 
 
 [![Language](https://img.shields.io/badge/Swift-5.0-green.svg?style=flat)](http://cocoapods.org/pods/MLYSDK) 
+[![Version](https://img.shields.io/badge/version-0.1.2-blue)](https://github.com/patricelee/poc-mly-avplayer/releases/tag/0.1.2) 
 
 ## Example
 
