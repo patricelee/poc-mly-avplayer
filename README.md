@@ -68,7 +68,7 @@ MLYAVPlayerPlugin.adapt(playerLayer: playerLayer)
 ```swift 
 func playVideo() {
     do {
-        let url = try ProxyURLModifier.replace(media url)
+        let url = try ProxyURLModifier.replace("media url")
         playerItem = AVPlayerItem(url: url)
         playerItem?.preferredForwardBufferDuration = 15
         player?.replaceCurrentItem(with: playerItem)
@@ -78,10 +78,6 @@ func playVideo() {
     }
 }
 ```
-
-## Author
-
-119390052, benson@letron.tech
 
 ## License
 
