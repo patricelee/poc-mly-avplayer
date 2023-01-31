@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/MLYSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WKrAjbj5Q7tpn5gxC0pWsp5aCkQ=
+		PZRLFhBi4IUmUxX99upNnnRRc2Q=
 		</data>
 		<key>Modules/MLYSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/MLYSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PZlxOLS3YhWuDYhR3lOMKwa+FRE=
+		HlIoiLOHsOGaWhWHdihcHBgdP10=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S5aDmwlckOwWofg86/1ZFLsQX4AgeiLGyuOfuCOfG2I=
+			++MUazLMLCROSkHLgUAUund5KIvBeQNCP2raGIxlRMo=
 			</data>
 		</dict>
 		<key>Modules/MLYSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ZkmHmj34XIGSJbG0o6a4Zg0OnKlhFU3PeW46Pph99s=
+			XpZKOyZ9+IRqU6VPBRe/8vB06eqIN8y1qX2lljp7+NU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
