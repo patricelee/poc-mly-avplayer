@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MLYSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of MLYSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -28,14 +28,21 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/patricelee/poc-mly-avplayer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.swift_version = '5.0'
+  
   s.ios.deployment_target = '14.0'
  
   s.ios.vendored_frameworks = 'sdk/MLYSDK.xcframework'
-# s.source_files = 'Sources/MLYSDK/Classes/**/*'
-   
-  s.swift_version = '5.0'
   
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+# s.source_files = 'Sources/MLYSDK/Classes/**/*'
+
+# s.public_header_files = 'Pod/Classes/**/*.h'
+
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64', 'ENABLE_BITCODE' => 'NO' }
+   
+  
+  
+ 
   s.frameworks = 'AVFoundation'
   
   s.dependency 'Mux-Stats-AVPlayer', '~> 3.1.0'

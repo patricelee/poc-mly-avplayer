@@ -30,11 +30,13 @@ pod 'MLYSDK',:git => 'https://github.com/patricelee/poc-mly-avplayer.git'
 ### 1 - Prepare  ###
  
 ```swift
-var player = AVPlayer()
-let playerLayer = AVPlayerLayer(player: player)
-playerLayer.videoGravity = .resizeAspect
-playerLayer.frame = view.bounds
-self.view.layer.addSublayer(playerLayer)
+self.player = .init()
+self.playerViewController = .init()
+
+self.playerViewController.showsPlaybackControls = true
+self.playerViewController.player = self.player
+self.addChild(self.playerViewController)
+self.view.addSubview(self.playerViewController.view)
 ``` 
 
 ### 2 - init  ###
