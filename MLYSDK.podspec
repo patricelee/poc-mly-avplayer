@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MLYSDK'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A short description of MLYSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -24,9 +24,10 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/patricelee/poc-mly-avplayer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '119390052' => 'benson@letron.tech' }
+  s.author           = { 'MLY' => 'ios-dev@letron.tech' }
   s.source           = { :git => 'https://github.com/patricelee/poc-mly-avplayer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  
+  s.readme = "https://raw.githubusercontent.com/patricelee/poc-mly-avplayer/main/README.md"
 
   s.swift_version = '5.0'
   

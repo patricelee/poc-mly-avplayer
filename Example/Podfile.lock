@@ -1,0 +1,48 @@
+PODS:
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - MLYSDK (0.1.8):
+    - GCDWebServer (~> 3.5.4)
+    - Mux-Stats-AVPlayer (~> 3.1.0)
+    - Sentry (~> 7.31.3)
+  - Mux-Stats-AVPlayer (3.1.0):
+    - Mux-Stats-Core (~> 4.2)
+  - Mux-Stats-Core (4.3.0)
+  - Sentry (7.31.5):
+    - Sentry/Core (= 7.31.5)
+  - Sentry/Core (7.31.5)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - MLYSDK (from `https://github.com/patricelee/poc-mly-avplayer.git`)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GCDWebServer
+    - Mux-Stats-AVPlayer
+    - Mux-Stats-Core
+    - Sentry
+    - SnapKit
+
+EXTERNAL SOURCES:
+  MLYSDK:
+    :git: https://github.com/patricelee/poc-mly-avplayer.git
+
+CHECKOUT OPTIONS:
+  MLYSDK:
+    :commit: 075439dc5d1be9ef833042b47839858e3fb47a11
+    :git: https://github.com/patricelee/poc-mly-avplayer.git
+
+SPEC CHECKSUMS:
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  MLYSDK: 5178bb4ff50cfcd49dbb7edb00258e34ea058553
+  Mux-Stats-AVPlayer: 669b2454e52700623f2ee89397cb77b1885ce600
+  Mux-Stats-Core: 57b0292b8e85224c4955595b777fcd8b352c116f
+  Sentry: 4c9babff9034785067c896fd580b1f7de44da020
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: e6de0da3c626d364d3afe189cfda547f1a7d6a73
+
+COCOAPODS: 1.11.3
