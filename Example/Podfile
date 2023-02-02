@@ -1,7 +1,6 @@
 use_frameworks!
 
 platform :ios, '14.0'
-source 'https://github.com/CocoaPods/Specs.git'
 
 target 'MLYSDK_Example' do
   pod 'MLYSDK',:git => 'https://github.com/patricelee/poc-mly-avplayer.git'
