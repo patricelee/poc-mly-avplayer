@@ -5,8 +5,6 @@ import SnapKit
 import UIKit
 
 class PlayerViewController: UIViewController {
-    let url = "https://vsp-stream.s3.ap-northeast-1.amazonaws.com/HLS/raw/SpaceX.m3u8"
-
     var player: AVPlayer!
     var playerViewController: AVPlayerViewController!
     var playerItem: AVPlayerItem!
@@ -43,7 +41,7 @@ class PlayerViewController: UIViewController {
     @objc func playVideo() {
         print("playVideo")
         do {
-            let url = try ProxyURLModifier.replace(self.url)
+            let url = try ProxyURLModifier.replace(play_m3u8)
             self.playerItem = AVPlayerItem(url: url)
             self.playerItem.preferredForwardBufferDuration = 15
             self.player.replaceCurrentItem(with: self.playerItem)
@@ -58,8 +56,8 @@ class PlayerViewController: UIViewController {
         MLYDriver.deactivate()
         var options: MLYDriverOptions {
             let options = MLYDriverOptions()
-            options.client.id = "cegh8d9j11u91ba1u600"
-            options.client.key = "Wr7t2lePF6uVvHpi4g0sqcoMkDX89Q5G"
+            options.client.id = client_id
+            options.client.key = client_key
             return options
         }
         do {

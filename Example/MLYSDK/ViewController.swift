@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 
     @objc func playVideo() {
         do {
-            let url = try ProxyURLModifier.replace("https://vsp-stream.s3.ap-northeast-1.amazonaws.com/HLS/raw/SpaceX.m3u8")
+            let url = try ProxyURLModifier.replace(play_m3u8)
             playerItem = AVPlayerItem(url: url)
             playerItem?.preferredForwardBufferDuration = 15
             player?.replaceCurrentItem(with: playerItem)
@@ -67,8 +67,8 @@ class ViewController: UIViewController {
         MLYDriver.deactivate()
         var options: MLYDriverOptions {
             let options = MLYDriverOptions()
-            options.client.id = "cegh8d9j11u91ba1u600"
-            options.client.key = "Wr7t2lePF6uVvHpi4g0sqcoMkDX89Q5G"
+            options.client.id = client_id
+            options.client.key = client_key
             return options
         }
         do {
