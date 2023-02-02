@@ -93,3 +93,5 @@ fastlane/test_output
 iOSInjectionProject/
 Example/.DS_Store
 */.DS_Store
+*.xcworkspacedata
+*.lock
