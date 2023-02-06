@@ -23,12 +23,23 @@ public class MLYAVPlayerAdapter {
 }
 public class MLYDriverOptions {
   public var client: MLYSDK.MLYClientOptions
+  public var server: MLYSDK.MLYServerOptions
+  public var debug: Swift.Bool {
+    get
+    set
+  }
   public init()
   @objc deinit
 }
 public struct MLYClientOptions {
   public var id: Swift.String?
   public var key: Swift.String?
+}
+public struct MLYServerOptions {
+  public var host: MLYSDK.MLYServerSetting
+}
+public struct MLYServerSetting {
+  public var fqdn: Swift.String?
 }
 public class MLYDriver {
   public init()
