@@ -6,6 +6,13 @@
     "children": [
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MLYSDK"
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -405,8 +412,11 @@
             "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
               "AccessControl"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -424,6 +434,7 @@
                 "usr": "s:6MLYSDK16MLYDriverOptionsC5debugSbvg",
                 "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvg",
                 "moduleName": "MLYSDK",
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -447,6 +458,7 @@
                 "usr": "s:6MLYSDK16MLYDriverOptionsC5debugSbvs",
                 "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvs",
                 "moduleName": "MLYSDK",
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -608,116 +620,6 @@
                 "declKind": "Accessor",
                 "usr": "s:6MLYSDK16MLYClientOptionsV2idSSSgvM",
                 "mangledName": "$s6MLYSDK16MLYClientOptionsV2idSSSgvM",
-                "moduleName": "MLYSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "key",
-            "printedName": "key",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYClientOptionsV3keySSSgvp",
-            "mangledName": "$s6MLYSDK16MLYClientOptionsV3keySSSgvp",
-            "moduleName": "MLYSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV3keySSSgvg",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV3keySSSgvg",
-                "moduleName": "MLYSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV3keySSSgvs",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV3keySSSgvs",
-                "moduleName": "MLYSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV3keySSSgvM",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV3keySSSgvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -1056,6 +958,961 @@
         "moduleName": "MLYSDK"
       },
       {
+        "kind": "TypeDecl",
+        "name": "Point",
+        "printedName": "Point",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK5PointC11descriptionSSvp",
+            "mangledName": "$s6MLYSDK5PointC11descriptionSSvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC11descriptionSSvg",
+                "mangledName": "$s6MLYSDK5PointC11descriptionSSvg",
+                "moduleName": "MLYSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "x",
+            "printedName": "x",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK5PointC1xSSvp",
+            "mangledName": "$s6MLYSDK5PointC1xSSvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1xSSvg",
+                "mangledName": "$s6MLYSDK5PointC1xSSvg",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1xSSvs",
+                "mangledName": "$s6MLYSDK5PointC1xSSvs",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1xSSvM",
+                "mangledName": "$s6MLYSDK5PointC1xSSvM",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "y",
+            "printedName": "y",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK5PointC1ys5Int64Vvp",
+            "mangledName": "$s6MLYSDK5PointC1ys5Int64Vvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1ys5Int64Vvg",
+                "mangledName": "$s6MLYSDK5PointC1ys5Int64Vvg",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1ys5Int64Vvs",
+                "mangledName": "$s6MLYSDK5PointC1ys5Int64Vvs",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK5PointC1ys5Int64VvM",
+                "mangledName": "$s6MLYSDK5PointC1ys5Int64VvM",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Point",
+                "printedName": "MLYSDK.Point",
+                "usr": "s:6MLYSDK5PointC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6MLYSDK5PointC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6MLYSDK5PointC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MLYSDK",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6MLYSDK5PointC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6MLYSDK5PointC6encode2toys7Encoder_p_tKF",
+            "moduleName": "MLYSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6MLYSDK5PointC",
+        "mangledName": "$s6MLYSDK5PointC",
+        "moduleName": "MLYSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MLYChart",
+        "printedName": "MLYChart",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "chart",
+            "printedName": "chart",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLYSDK.MLYCharPoint]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MLYCharPoint",
+                        "printedName": "MLYSDK.MLYCharPoint",
+                        "usr": "s:6MLYSDK12MLYCharPointC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvpZ",
+            "mangledName": "$s6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvpZ",
+            "moduleName": "MLYSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MLYSDK.MLYCharPoint]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MLYCharPoint",
+                            "printedName": "MLYSDK.MLYCharPoint",
+                            "usr": "s:6MLYSDK12MLYCharPointC"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvgZ",
+                "mangledName": "$s6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvgZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MLYSDK.MLYCharPoint]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MLYCharPoint",
+                            "printedName": "MLYSDK.MLYCharPoint",
+                            "usr": "s:6MLYSDK12MLYCharPointC"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvsZ",
+                "mangledName": "$s6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvsZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvMZ",
+                "mangledName": "$s6MLYSDK8MLYChartC5chartSDySSSayAA12MLYCharPointCGGvMZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "chartScore",
+            "printedName": "chartScore",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLYSDK.MLYCharPoint]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MLYCharPoint",
+                        "printedName": "MLYSDK.MLYCharPoint",
+                        "usr": "s:6MLYSDK12MLYCharPointC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvpZ",
+            "mangledName": "$s6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvpZ",
+            "moduleName": "MLYSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MLYSDK.MLYCharPoint]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MLYCharPoint",
+                            "printedName": "MLYSDK.MLYCharPoint",
+                            "usr": "s:6MLYSDK12MLYCharPointC"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvgZ",
+                "mangledName": "$s6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvgZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [MLYSDK.MLYCharPoint]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MLYSDK.MLYCharPoint]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MLYCharPoint",
+                            "printedName": "MLYSDK.MLYCharPoint",
+                            "usr": "s:6MLYSDK12MLYCharPointC"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvsZ",
+                "mangledName": "$s6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvsZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvMZ",
+                "mangledName": "$s6MLYSDK8MLYChartC10chartScoreSDySSSayAA12MLYCharPointCGGvMZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6MLYSDK8MLYChartC",
+        "mangledName": "$s6MLYSDK8MLYChartC",
+        "moduleName": "MLYSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MLYCharPoint",
+        "printedName": "MLYCharPoint",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK12MLYCharPointC11descriptionSSvp",
+            "mangledName": "$s6MLYSDK12MLYCharPointC11descriptionSSvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC11descriptionSSvg",
+                "mangledName": "$s6MLYSDK12MLYCharPointC11descriptionSSvg",
+                "moduleName": "MLYSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "char_x",
+            "printedName": "char_x",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK12MLYCharPointC6char_xSSvp",
+            "mangledName": "$s6MLYSDK12MLYCharPointC6char_xSSvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_xSSvg",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_xSSvg",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_xSSvs",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_xSSvs",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_xSSvM",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_xSSvM",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "char_y",
+            "printedName": "char_y",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK12MLYCharPointC6char_ySdvp",
+            "mangledName": "$s6MLYSDK12MLYCharPointC6char_ySdvp",
+            "moduleName": "MLYSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_ySdvg",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_ySdvg",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_ySdvs",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_ySdvs",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK12MLYCharPointC6char_ySdvM",
+                "mangledName": "$s6MLYSDK12MLYCharPointC6char_ySdvM",
+                "moduleName": "MLYSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MLYCharPoint",
+                "printedName": "MLYSDK.MLYCharPoint",
+                "usr": "s:6MLYSDK12MLYCharPointC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6MLYSDK12MLYCharPointC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6MLYSDK12MLYCharPointC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MLYSDK",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6MLYSDK12MLYCharPointC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6MLYSDK12MLYCharPointC6encode2toys7Encoder_p_tKF",
+            "moduleName": "MLYSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6MLYSDK12MLYCharPointC",
+        "mangledName": "$s6MLYSDK12MLYCharPointC",
+        "moduleName": "MLYSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1067,6 +1924,57 @@
         "name": "MLYDriver",
         "printedName": "MLYDriver",
         "children": [
+          {
+            "kind": "Var",
+            "name": "VERSION",
+            "printedName": "VERSION",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6MLYSDK9MLYDriverC7VERSIONSSvpZ",
+            "mangledName": "$s6MLYSDK9MLYDriverC7VERSIONSSvpZ",
+            "moduleName": "MLYSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6MLYSDK9MLYDriverC7VERSIONSSvgZ",
+                "mangledName": "$s6MLYSDK9MLYDriverC7VERSIONSSvgZ",
+                "moduleName": "MLYSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Constructor",
             "name": "init",
@@ -1188,6 +2096,13 @@
       },
       {
         "kind": "Import",
+        "name": "CoreTelephony",
+        "printedName": "CoreTelephony",
+        "declKind": "Import",
+        "moduleName": "MLYSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1299,6 +2214,43 @@
             "declKind": "EnumElement",
             "usr": "s:6MLYSDK21ProxyURLModifierErrorO16IllegalURLFormatyA2CmF",
             "mangledName": "$s6MLYSDK21ProxyURLModifierErrorO16IllegalURLFormatyA2CmF",
+            "moduleName": "MLYSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ExceptionInInitializerError",
+            "printedName": "ExceptionInInitializerError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MLYSDK.ProxyURLModifierError.Type) -> MLYSDK.ProxyURLModifierError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProxyURLModifierError",
+                    "printedName": "MLYSDK.ProxyURLModifierError",
+                    "usr": "s:6MLYSDK21ProxyURLModifierErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MLYSDK.ProxyURLModifierError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProxyURLModifierError",
+                        "printedName": "MLYSDK.ProxyURLModifierError",
+                        "usr": "s:6MLYSDK21ProxyURLModifierErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6MLYSDK21ProxyURLModifierErrorO022ExceptionInInitializerD0yA2CmF",
+            "mangledName": "$s6MLYSDK21ProxyURLModifierErrorO022ExceptionInInitializerD0yA2CmF",
             "moduleName": "MLYSDK"
           },
           {
@@ -1770,16 +2722,16 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/ChannelHub.swift",
-      "kind": "Dictionary",
-      "offset": 49,
-      "length": 3,
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/Channel.swift",
+      "kind": "Array",
+      "offset": 65,
+      "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/ChannelHub.swift",
       "kind": "Dictionary",
-      "offset": 95,
+      "offset": 64,
       "length": 3,
       "value": "[]"
     },
@@ -1987,6 +2939,13 @@
       "value": "\"video\/mp2t\""
     },
     {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DateTool.swift",
+      "kind": "StringLiteral",
+      "offset": 229,
+      "length": 21,
+      "value": "\"yyyy-MM-dd HH:mm:ss\""
+    },
+    {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/model\/DomainMetrics.swift",
       "kind": "Array",
       "offset": 521,
@@ -1996,14 +2955,14 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/model\/DomainMetrics.swift",
       "kind": "Array",
-      "offset": 2019,
+      "offset": 1850,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/model\/DomainMetrics.swift",
       "kind": "Array",
-      "offset": 2074,
+      "offset": 1905,
       "length": 2,
       "value": "[]"
     },
@@ -2078,30 +3037,65 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/DownloadStats.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1058,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/DownloadStats.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1093,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/DownloadStats.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1121,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/DownloadStats.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1149,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 114,
+      "offset": 106,
       "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "Array",
+      "offset": 185,
+      "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 184,
+      "offset": 224,
       "length": 2,
-      "value": "60"
+      "value": "10"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 429,
+      "offset": 573,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 1505,
+      "offset": 1632,
       "length": 3,
       "value": "[]"
     },
@@ -2114,94 +3108,122 @@
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2724,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 2756,
+      "offset": 2904,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 4534,
+      "offset": 4886,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 1707,
+      "offset": 1834,
       "length": 12,
       "value": "\"MLYSDK.DownloadTask\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5870,
+      "offset": 6319,
+      "length": 2,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6351,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5885,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5904,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5870,
+      "offset": 6412,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5885,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5904,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5870,
+      "offset": 6489,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5885,
+      "offset": 8145,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8160,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5904,
+      "offset": 8179,
       "length": 4,
       "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8145,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8160,
+      "length": 5,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8179,
+      "length": 4,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8145,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8160,
+      "length": 5,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/DownloadTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8179,
+      "length": 4,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/DriverConfigurator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 575,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/DriverSupervisor.swift",
@@ -2237,6 +3259,13 @@
       "offset": 73,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/EventTool.swift",
+      "kind": "StringLiteral",
+      "offset": 67,
+      "length": 6,
+      "value": "\"DATA\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/Flow.swift",
@@ -2521,14 +3550,14 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/api\/base\/HostRequester.swift",
       "kind": "StringLiteral",
-      "offset": 1949,
+      "offset": 1953,
       "length": 17,
       "value": "\"MLYSDK.CDNScoreRequester\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/api\/base\/HostRequester.swift",
       "kind": "StringLiteral",
-      "offset": 2558,
+      "offset": 2562,
       "length": 17,
       "value": "\"MLYSDK.MeteringRequester\""
     },
@@ -2625,15 +3654,15 @@
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/HTTPDownloadRecordHandler.swift",
-      "kind": "Dictionary",
-      "offset": 5142,
-      "length": 3,
-      "value": "[]"
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/HTTPDownloadRecordHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 19850,
+      "offset": 19342,
       "length": 1,
       "value": "1"
     },
@@ -2647,175 +3676,182 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 750,
       "length": 6,
       "value": "\"null\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 826,
+      "offset": 852,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 904,
       "length": 17,
       "value": "\"vsp.mlytics.com\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 870,
+      "offset": 948,
       "length": 4,
       "value": "\"v1\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "Array",
-      "offset": 929,
+      "offset": 1007,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 958,
+      "offset": 1036,
       "length": 4,
       "value": "\"v1\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1283,
+      "offset": 1361,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1319,
+      "offset": 1397,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1379,
+      "offset": 1457,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1420,
+      "offset": 1498,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1451,
+      "offset": 1529,
       "length": 4,
       "value": "8192"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1509,
+      "offset": 1587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "FloatLiteral",
-      "offset": 1544,
+      "offset": 1622,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1606,
+      "offset": 1684,
       "length": 4,
       "value": "8192"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "FloatLiteral",
-      "offset": 1647,
+      "offset": 1725,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1694,
+      "offset": 1772,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1741,
+      "offset": 1819,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1791,
+      "offset": 1869,
       "length": 5,
       "value": "34567"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1820,
+      "offset": 1898,
       "length": 11,
       "value": "\"127.0.0.1\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1857,
+      "offset": 1935,
       "length": 6,
       "value": "\"http\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1918,
+      "offset": 1996,
       "length": 16,
       "value": "\"YYYYMMDDHHmmss\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1971,
+      "offset": 2049,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2394,
+      "offset": 2472,
       "length": 16,
       "value": "\"^[0-9a-z]{20}$\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2412,
+      "offset": 2490,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2454,
+      "offset": 2532,
       "length": 16,
       "value": "\"^[0-9a-z]{32}$\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/KernelSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2472,
+      "offset": 2550,
       "length": 4,
       "value": "true"
     },
@@ -2969,7 +4005,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/Logger.swift",
       "kind": "Array",
-      "offset": 2705,
+      "offset": 2710,
       "length": 68,
       "value": "[\"\", \"TRACE\", \"TRACK\", \"INFO\", \"WARN\", \"DEBUG\", \"ERROR\", \"CRITICAL\"]"
     },
@@ -3039,44 +4075,30 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
       "kind": "Array",
-      "offset": 5477,
+      "offset": 6184,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
       "kind": "Array",
-      "offset": 5508,
+      "offset": 6215,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 7887,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7924,
+      "offset": 8745,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 7987,
+      "offset": 8808,
       "length": 1,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNComponent.swift",
-      "kind": "Dictionary",
-      "offset": 8166,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/service\/filter\/MCDNDownloaderProxy.swift",
@@ -3130,7 +4152,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNDownloadRecorder.swift",
       "kind": "StringLiteral",
-      "offset": 6401,
+      "offset": 6418,
       "length": 23,
       "value": "\"MLYSDK.MeanBandwidthCalculator\""
     },
@@ -4929,217 +5951,210 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 13700,
-      "length": 22,
-      "value": "\"http_download_record\""
+      "offset": 12441,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12470,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 13759,
-      "length": 20,
-      "value": "\"cdn_config_records\""
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
-      "kind": "StringLiteral",
-      "offset": 13817,
+      "offset": 12606,
       "length": 21,
       "value": "\"cdn_download_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 13876,
+      "offset": 12665,
       "length": 21,
       "value": "\"p2p_download_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 13936,
+      "offset": 12725,
       "length": 22,
       "value": "\"tracker_state_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 13994,
+      "offset": 12783,
       "length": 19,
       "value": "\"node_state_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14050,
+      "offset": 12839,
       "length": 20,
       "value": "\"swarm_state_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14106,
+      "offset": 12895,
       "length": 19,
       "value": "\"user_state_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14161,
+      "offset": 12950,
       "length": 19,
       "value": "\"purge_cdn_records\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14262,
-      "length": 48,
-      "value": "\"metrics collector: handle http download record\""
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
-      "kind": "StringLiteral",
-      "offset": 14363,
+      "offset": 13063,
       "length": 55,
       "value": "\"metrics collector: handle http download pulse traffic\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14476,
+      "offset": 13176,
       "length": 60,
       "value": "\"metrics collector: handle http download cumulative traffic\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14589,
+      "offset": 13289,
       "length": 55,
       "value": "\"metrics collector: handle http download wma bandwidth\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14701,
+      "offset": 13401,
       "length": 59,
       "value": "\"metrics collector: handle http download usage pulse count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14822,
+      "offset": 13522,
       "length": 64,
       "value": "\"metrics collector: handle http download usage cumulative count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 14945,
+      "offset": 13645,
       "length": 61,
       "value": "\"metrics collector: handle http download success pulse count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15070,
+      "offset": 13770,
       "length": 66,
       "value": "\"metrics collector: handle http download success cumulative count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15195,
+      "offset": 13895,
       "length": 61,
       "value": "\"metrics collector: handle http download failure pulse count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15320,
+      "offset": 14020,
       "length": 66,
       "value": "\"metrics collector: handle http download failure cumulative count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15430,
+      "offset": 14130,
       "length": 46,
       "value": "\"metrics collector: handle cdn config records\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15521,
+      "offset": 14221,
       "length": 47,
       "value": "\"metrics collector: handle cdn download record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15626,
+      "offset": 14326,
       "length": 60,
       "value": "\"metrics collector: handle cdn download last mean bandwidth\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15747,
+      "offset": 14447,
       "length": 63,
       "value": "\"metrics collector: handle cdn download last mean availability\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15867,
+      "offset": 14567,
       "length": 59,
       "value": "\"metrics collector: handle cdn download last current score\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 15971,
+      "offset": 14671,
       "length": 47,
       "value": "\"metrics collector: handle p2p download record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16064,
+      "offset": 14764,
       "length": 48,
       "value": "\"metrics collector: handle tracker state record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16155,
+      "offset": 14855,
       "length": 45,
       "value": "\"metrics collector: handle node state record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16244,
+      "offset": 14944,
       "length": 46,
       "value": "\"metrics collector: handle swarm state record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16333,
+      "offset": 15033,
       "length": 45,
       "value": "\"metrics collector: handle user state record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16421,
+      "offset": 15121,
       "length": 45,
       "value": "\"metrics collector: handle purge cdn records\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsCollector.swift",
       "kind": "StringLiteral",
-      "offset": 16511,
+      "offset": 15211,
       "length": 47,
       "value": "\"metrics collector: handle prune metrics stats\""
     },
@@ -5167,149 +6182,184 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 214,
-      "length": 22,
-      "value": "\"http_download_record\""
-    },
-    {
-      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
-      "kind": "StringLiteral",
-      "offset": 282,
+      "offset": 209,
       "length": 29,
       "value": "\"http_download_pulse_traffic\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 362,
+      "offset": 289,
       "length": 34,
       "value": "\"http_download_cumulative_traffic\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 442,
+      "offset": 369,
       "length": 29,
       "value": "\"http_download_wma_bandwidth\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 521,
+      "offset": 448,
       "length": 33,
       "value": "\"http_download_usage_pulse_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 609,
+      "offset": 536,
       "length": 38,
       "value": "\"http_download_usage_cumulative_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 699,
+      "offset": 626,
       "length": 35,
       "value": "\"http_download_success_pulse_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 791,
+      "offset": 718,
       "length": 40,
       "value": "\"http_download_success_cumulative_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 883,
+      "offset": 810,
       "length": 35,
       "value": "\"http_download_failure_pulse_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 902,
       "length": 40,
       "value": "\"http_download_failure_cumulative_count\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1066,
+      "offset": 993,
       "length": 34,
       "value": "\"cdn_download_last_mean_bandwidth\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1154,
+      "offset": 1081,
       "length": 37,
       "value": "\"cdn_download_last_mean_availability\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1241,
+      "offset": 1168,
       "length": 33,
       "value": "\"cdn_download_last_current_score\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1312,
+      "offset": 1239,
       "length": 21,
       "value": "\"p2p_download_record\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1369,
+      "offset": 1296,
       "length": 19,
       "value": "\"p2sp_system_state\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1427,
+      "offset": 1354,
       "length": 22,
       "value": "\"source_pulse_traffic\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/infra\/metrics\/MetricsExporter.swift",
       "kind": "StringLiteral",
-      "offset": 1493,
+      "offset": 1420,
       "length": 27,
       "value": "\"source_cumulative_traffic\""
     },
     {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYChart.swift",
+      "kind": "Dictionary",
+      "offset": 81,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYChart.swift",
+      "kind": "Dictionary",
+      "offset": 146,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYChart.swift",
+      "kind": "Dictionary",
+      "offset": 192,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYChart.swift",
+      "kind": "StringLiteral",
+      "offset": 3790,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYChart.swift",
+      "kind": "FloatLiteral",
+      "offset": 3825,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
+      "kind": "StringLiteral",
+      "offset": 76,
+      "length": 8,
+      "value": "\"0.1.13\""
+    },
+    {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 651,
+      "offset": 721,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 680,
+      "offset": 750,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 708,
+      "offset": 778,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/vendor\/MuxComponent.swift",
       "kind": "StringLiteral",
-      "offset": 78,
-      "length": 27,
-      "value": "\"gp0ku38e5c6fglvgp4is4e24d\""
+      "offset": 77,
+      "length": 10,
+      "value": "\"AVPlayer\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/ObjectLike.swift",
@@ -5783,7 +6833,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/system\/SystemBooter.swift",
       "kind": "Dictionary",
-      "offset": 1499,
+      "offset": 1486,
       "length": 3,
       "value": "[]"
     },
@@ -5832,63 +6882,63 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 544,
+      "offset": 608,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 751,
+      "offset": 815,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 826,
+      "offset": 890,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1245,
+      "offset": 1309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1326,
+      "offset": 1390,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1720,
+      "offset": 1784,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1795,
+      "offset": 1859,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1828,
+      "offset": 1892,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/util\/TaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1862,
+      "offset": 1926,
       "length": 2,
       "value": "1"
     },

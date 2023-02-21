@@ -1,7 +1,6 @@
 import UIKit
 
 let client_id = "cegh8d9j11u91ba1u600"
-let client_key = "Wr7t2lePF6uVvHpi4g0sqcoMkDX89Q5G"
 let play_m3u8 = "https://vsp-stream.s3.ap-northeast-1.amazonaws.com/HLS/raw/SpaceX.m3u8"
 
 @UIApplicationMain

@@ -68,7 +68,6 @@ class ViewController: UIViewController {
         var options: MLYDriverOptions {
             let options = MLYDriverOptions()
             options.client.id = client_id
-            options.client.key = client_key
             return options
         }
         do {
