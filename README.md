@@ -46,8 +46,7 @@ self.view.addSubview(self.playerViewController.view)
 MLYDriver.deactivate()
 var options: MLYDriverOptions {
     let options = MLYDriverOptions()
-    options.client.id = "input id"
-    options.client.key = "input key"
+    options.client.id = "input id" 
     return options
 }
 do {

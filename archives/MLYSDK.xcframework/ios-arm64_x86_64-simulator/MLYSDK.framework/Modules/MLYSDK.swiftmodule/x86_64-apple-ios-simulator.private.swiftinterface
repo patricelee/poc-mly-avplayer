@@ -15,11 +15,14 @@ import Sentry
 import Swift
 import _Concurrency
 import _StringProcessing
-public enum MLYAVPlayerPlugin {
-  public static func adapt(playerLayer: AVFoundation.AVPlayerLayer? = nil, playerViewController: AVKit.AVPlayerViewController? = nil)
+public class MLYAVPlayerPlugin {
+  public init()
+  public func adapt(_ playerViewController: AVKit.AVPlayerViewController? = nil)
+  @objc deinit
+  @objc public func notifyPlayerItemNewAccessLogEntry()
 }
 public class MLYAVPlayerAdapter {
-  public init(playerLayer: AVFoundation.AVPlayerLayer? = nil, playerViewController: AVKit.AVPlayerViewController? = nil)
+  public init(_ playerLayer: AVFoundation.AVPlayerLayer? = nil, _ playerViewController: AVKit.AVPlayerViewController? = nil)
   @objc deinit
 }
 public class MLYDriverOptions {
