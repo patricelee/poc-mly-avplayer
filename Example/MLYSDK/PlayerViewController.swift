@@ -9,8 +9,8 @@ class PlayerViewController: UIViewController {
     var playerViewController: AVPlayerViewController!
     var playerItem: AVPlayerItem!
     var playButton: UIButton!
-    var restartButton: UIButton!
-    public var driver = MLYDriver()
+
+    var plugin: MLYAVPlayerPlugin = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,31 +29,25 @@ class PlayerViewController: UIViewController {
             make.edges.equalToSuperview()
         }
 
-        self.playButton = addButton("Play", #selector(self.playVideo), top: -20, left: 20)
-        self.restartButton = addButton("Restart", #selector(self.restart), top: -20, left: -20)
+        self.playButton = addButton("Play", #selector(self.playVideo), top: -20, left: -20)
 
         self.view.layoutIfNeeded()
 
-        self.restart()
-        MLYAVPlayerPlugin.adapt(playerViewController: self.playerViewController)
+        self.startDriver()
+        self.plugin.adapt(self.playerViewController)
     }
 
     @objc func playVideo() {
-        print("playVideo")
-        do {
-            let url = try ProxyURLModifier.replace(play_m3u8)
-            self.playerItem = AVPlayerItem(url: url)
-            self.playerItem.preferredForwardBufferDuration = 15
-            self.player.replaceCurrentItem(with: self.playerItem)
-            self.player.play()
-        } catch {
-            print(error)
-        }
+        debugPrint("PlayVideo")
+        let url = URL(string: play_m3u8)!
+        self.playerItem = AVPlayerItem(url: url)
+        self.playerItem.preferredForwardBufferDuration = 15
+        self.player.replaceCurrentItem(with: self.playerItem)
+        self.player.play()
     }
 
-    @objc func restart() {
-        print("restart")
-        MLYDriver.deactivate()
+    @objc func startDriver() {
+        print("startDriver")
         var options: MLYDriverOptions {
             let options = MLYDriverOptions()
             options.client.id = client_id

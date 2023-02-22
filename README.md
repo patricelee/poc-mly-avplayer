@@ -20,13 +20,8 @@ it, simply add the following line to your Podfile:
 pod 'MLYSDK' 
 ```
 
-or
-
-```bash
-pod 'MLYSDK',:git => 'https://github.com/patricelee/poc-mly-avplayer.git'
-```
-
 ## Usage
+
 
 ### 1 - Prepare  ###
  
@@ -40,10 +35,9 @@ self.addChild(self.playerViewController)
 self.view.addSubview(self.playerViewController.view)
 ``` 
 
-### 2 - init  ###
+### 2 - initialize  MLYDriver ###
 
-```swift   
-MLYDriver.deactivate()
+```swift 
 var options: MLYDriverOptions {
     let options = MLYDriverOptions()
     options.client.id = "input id" 
@@ -55,26 +49,25 @@ do {
     print(error)
 }
 ```
- 
-### 3  ###
 
-```swift  
-MLYAVPlayerPlugin.adapt(playerLayer: playerLayer)
-``` 
+### 3 - plugin  ###
 
-### playVideo  ###
+```swift    
+var plugin: MLYAVPlayerPlugin = .init()
+
+self.plugin.adapt(self.playerViewController)
+```
+
+
+### 4 - Play Video  ###
 
 ```swift 
 func playVideo() {
-    do {
-        let url = try ProxyURLModifier.replace("media url")
-        playerItem = AVPlayerItem(url: url)
-        playerItem?.preferredForwardBufferDuration = 15
-        player?.replaceCurrentItem(with: playerItem)
-        player?.play()
-    } catch {
-        print(error)
-    }
+    let url = URL(string: play_m3u8)!
+    self.playerItem = AVPlayerItem(url: url)
+    self.playerItem.preferredForwardBufferDuration = 15
+    self.player.replaceCurrentItem(with: self.playerItem)
+    self.player.play()
 }
 ```
 
