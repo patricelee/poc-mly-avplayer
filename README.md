@@ -61,8 +61,7 @@ self.plugin.adapt(self.playerViewController)
 ```swift 
 func playVideo() {
     let url = URL(string: play_m3u8)!
-
-    MLYDriver.ready()
+ 
     let playerItem = AVPlayerItem(url: url)
     self.player.replaceCurrentItem(with: playerItem)
     self.player.play()
