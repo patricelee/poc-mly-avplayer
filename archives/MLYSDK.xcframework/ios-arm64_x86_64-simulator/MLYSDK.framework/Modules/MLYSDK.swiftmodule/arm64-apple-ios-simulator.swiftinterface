@@ -20,7 +20,7 @@ public class MLYAVPlayerPlugin {
   public init()
   public func adapt(_ playerViewController: AVKit.AVPlayerViewController? = nil)
   public func buildPlayerItem(url: Foundation.URL) throws -> AVFoundation.AVPlayerItem
-  public func play(url: Foundation.URL) throws
+  public func play(url: Foundation.URL)
   @objc deinit
   @objc public func notifyPlayerItemNewAccessLogEntry()
 }

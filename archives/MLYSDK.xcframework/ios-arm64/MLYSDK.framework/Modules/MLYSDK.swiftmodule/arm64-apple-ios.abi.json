@@ -249,13 +249,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tKF",
-            "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tKF",
+            "usr": "s:6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tF",
+            "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tF",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "AccessControl"
             ],
-            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -6956,7 +6955,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/vendor\/SentryComponent.swift",
       "kind": "StringLiteral",
-      "offset": 653,
+      "offset": 639,
       "length": 84,
       "value": "\"https:\/\/ae5860091d524009a29130553a1770f7@o255849.ingest.sentry.io\/4504314925809664\""
     },
