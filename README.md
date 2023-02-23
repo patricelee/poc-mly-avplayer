@@ -40,8 +40,7 @@ self.view.addSubview(self.playerViewController.view)
 ```swift 
 do {
     try MLYDriver.initialize { options in
-        options.client.id = client_id
-        options.debug = true
+        options.client.id = client_id 
     }
 } catch {
     print(error)
