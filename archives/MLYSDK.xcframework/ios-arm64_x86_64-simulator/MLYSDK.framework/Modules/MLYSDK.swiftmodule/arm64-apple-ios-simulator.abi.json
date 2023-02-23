@@ -156,15 +156,20 @@
                 "kind": "TypeNominal",
                 "name": "MLYAVPlayerPlugin",
                 "printedName": "MLYSDK.MLYAVPlayerPlugin",
-                "usr": "s:6MLYSDK17MLYAVPlayerPluginC"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginCACycfc",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin(im)init",
             "mangledName": "$s6MLYSDK17MLYAVPlayerPluginCACycfc",
             "moduleName": "MLYSDK",
+            "overriding": true,
+            "objc_name": "init",
             "declAttributes": [
-              "AccessControl"
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
             ],
             "init_kind": "Designated"
           },
@@ -195,11 +200,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginC5adaptyySo22AVPlayerViewControllerCSgF",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin(im)adapt:",
             "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC5adaptyySo22AVPlayerViewControllerCSgF",
             "moduleName": "MLYSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -222,11 +228,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginC15buildPlayerItem3urlSo08AVPlayerF0C10Foundation3URLV_tKF",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin(im)buildPlayerItemWithUrl:error:",
             "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC15buildPlayerItem3urlSo08AVPlayerF0C10Foundation3URLV_tKF",
             "moduleName": "MLYSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -249,11 +256,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tF",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin(im)playWithUrl:",
             "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC4play3urly10Foundation3URLV_tF",
             "moduleName": "MLYSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -269,7 +277,7 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK17MLYAVPlayerPluginC33notifyPlayerItemNewAccessLogEntryyyF",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin(im)notifyPlayerItemNewAccessLogEntry",
             "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC33notifyPlayerItemNewAccessLogEntryyyF",
             "moduleName": "MLYSDK",
             "declAttributes": [
@@ -280,11 +288,69 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:6MLYSDK17MLYAVPlayerPluginC",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYAVPlayerPlugin",
         "mangledName": "$s6MLYSDK17MLYAVPlayerPluginC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -422,17 +488,18 @@
                 "kind": "TypeNominal",
                 "name": "MLYClientOptions",
                 "printedName": "MLYSDK.MLYClientOptions",
-                "usr": "s:6MLYSDK16MLYClientOptionsV"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvp",
-            "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(py)client",
+            "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Cvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -445,14 +512,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYClientOptions",
                     "printedName": "MLYSDK.MLYClientOptions",
-                    "usr": "s:6MLYSDK16MLYClientOptionsV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvg",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)client",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Cvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -469,14 +539,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYClientOptions",
                     "printedName": "MLYSDK.MLYClientOptions",
-                    "usr": "s:6MLYSDK16MLYClientOptionsV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvs",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Vvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)setClient:",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0Cvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -491,8 +564,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0VvM",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0VvM",
+                "usr": "s:6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0CvM",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6clientAA09MLYClientC0CvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -508,17 +581,18 @@
                 "kind": "TypeNominal",
                 "name": "MLYServerOptions",
                 "printedName": "MLYSDK.MLYServerOptions",
-                "usr": "s:6MLYSDK16MLYServerOptionsV"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvp",
-            "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(py)server",
+            "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Cvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -531,14 +605,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYServerOptions",
                     "printedName": "MLYSDK.MLYServerOptions",
-                    "usr": "s:6MLYSDK16MLYServerOptionsV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvg",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)server",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Cvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -555,14 +632,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYServerOptions",
                     "printedName": "MLYSDK.MLYServerOptions",
-                    "usr": "s:6MLYSDK16MLYServerOptionsV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvs",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Vvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)setServer:",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0Cvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -577,8 +657,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0VvM",
-                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0VvM",
+                "usr": "s:6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0CvM",
+                "mangledName": "$s6MLYSDK16MLYDriverOptionsC6serverAA09MLYServerC0CvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -598,13 +678,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYDriverOptionsC5debugSbvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(py)debug",
             "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -621,10 +702,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC5debugSbvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)debug",
                 "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -645,10 +729,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC5debugSbvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)setDebug:",
                 "mangledName": "$s6MLYSDK16MLYDriverOptionsC5debugSbvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -680,25 +767,88 @@
                 "kind": "TypeNominal",
                 "name": "MLYDriverOptions",
                 "printedName": "MLYSDK.MLYDriverOptions",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6MLYSDK16MLYDriverOptionsCACycfc",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions(im)init",
             "mangledName": "$s6MLYSDK16MLYDriverOptionsCACycfc",
             "moduleName": "MLYSDK",
+            "overriding": true,
+            "objc_name": "init",
             "declAttributes": [
-              "AccessControl"
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
             ],
             "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:6MLYSDK16MLYDriverOptionsC",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions",
         "mangledName": "$s6MLYSDK16MLYDriverOptionsC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -727,13 +877,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYClientOptionsV2idSSSgvp",
-            "mangledName": "$s6MLYSDK16MLYClientOptionsV2idSSSgvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions(py)id",
+            "mangledName": "$s6MLYSDK16MLYClientOptionsC2idSSSgvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -758,10 +909,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV2idSSSgvg",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV2idSSSgvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions(im)id",
+                "mangledName": "$s6MLYSDK16MLYClientOptionsC2idSSSgvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -790,10 +944,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV2idSSSgvs",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV2idSSSgvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions(im)setId:",
+                "mangledName": "$s6MLYSDK16MLYClientOptionsC2idSSSgvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -808,21 +965,105 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYClientOptionsV2idSSSgvM",
-                "mangledName": "$s6MLYSDK16MLYClientOptionsV2idSSSgvM",
+                "usr": "s:6MLYSDK16MLYClientOptionsC2idSSSgvM",
+                "mangledName": "$s6MLYSDK16MLYClientOptionsC2idSSSgvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MLYClientOptions",
+                "printedName": "MLYSDK.MLYClientOptions",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions(im)init",
+            "mangledName": "$s6MLYSDK16MLYClientOptionsCACycfc",
+            "moduleName": "MLYSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:6MLYSDK16MLYClientOptionsV",
-        "mangledName": "$s6MLYSDK16MLYClientOptionsV",
+        "declKind": "Class",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYClientOptions",
+        "mangledName": "$s6MLYSDK16MLYClientOptionsC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -839,17 +1080,18 @@
                 "kind": "TypeNominal",
                 "name": "MLYServerSetting",
                 "printedName": "MLYSDK.MLYServerSetting",
-                "usr": "s:6MLYSDK16MLYServerSettingV"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvp",
-            "mangledName": "$s6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions(py)host",
+            "mangledName": "$s6MLYSDK16MLYServerOptionsC4hostAA0B7SettingCvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -862,14 +1104,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYServerSetting",
                     "printedName": "MLYSDK.MLYServerSetting",
-                    "usr": "s:6MLYSDK16MLYServerSettingV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvg",
-                "mangledName": "$s6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions(im)host",
+                "mangledName": "$s6MLYSDK16MLYServerOptionsC4hostAA0B7SettingCvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -886,14 +1131,17 @@
                     "kind": "TypeNominal",
                     "name": "MLYServerSetting",
                     "printedName": "MLYSDK.MLYServerSetting",
-                    "usr": "s:6MLYSDK16MLYServerSettingV"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvs",
-                "mangledName": "$s6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions(im)setHost:",
+                "mangledName": "$s6MLYSDK16MLYServerOptionsC4hostAA0B7SettingCvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -908,21 +1156,105 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvM",
-                "mangledName": "$s6MLYSDK16MLYServerOptionsV4hostAA0B7SettingVvM",
+                "usr": "s:6MLYSDK16MLYServerOptionsC4hostAA0B7SettingCvM",
+                "mangledName": "$s6MLYSDK16MLYServerOptionsC4hostAA0B7SettingCvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MLYServerOptions",
+                "printedName": "MLYSDK.MLYServerOptions",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions(im)init",
+            "mangledName": "$s6MLYSDK16MLYServerOptionsCACycfc",
+            "moduleName": "MLYSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:6MLYSDK16MLYServerOptionsV",
-        "mangledName": "$s6MLYSDK16MLYServerOptionsV",
+        "declKind": "Class",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYServerOptions",
+        "mangledName": "$s6MLYSDK16MLYServerOptionsC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -951,13 +1283,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK16MLYServerSettingV4fqdnSSSgvp",
-            "mangledName": "$s6MLYSDK16MLYServerSettingV4fqdnSSSgvp",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting(py)fqdn",
+            "mangledName": "$s6MLYSDK16MLYServerSettingC4fqdnSSSgvp",
             "moduleName": "MLYSDK",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -982,10 +1315,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerSettingV4fqdnSSSgvg",
-                "mangledName": "$s6MLYSDK16MLYServerSettingV4fqdnSSSgvg",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting(im)fqdn",
+                "mangledName": "$s6MLYSDK16MLYServerSettingC4fqdnSSSgvg",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -1014,10 +1350,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerSettingV4fqdnSSSgvs",
-                "mangledName": "$s6MLYSDK16MLYServerSettingV4fqdnSSSgvs",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting(im)setFqdn:",
+                "mangledName": "$s6MLYSDK16MLYServerSettingC4fqdnSSSgvs",
                 "moduleName": "MLYSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -1032,21 +1371,105 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK16MLYServerSettingV4fqdnSSSgvM",
-                "mangledName": "$s6MLYSDK16MLYServerSettingV4fqdnSSSgvM",
+                "usr": "s:6MLYSDK16MLYServerSettingC4fqdnSSSgvM",
+                "mangledName": "$s6MLYSDK16MLYServerSettingC4fqdnSSSgvM",
                 "moduleName": "MLYSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MLYServerSetting",
+                "printedName": "MLYSDK.MLYServerSetting",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting(im)init",
+            "mangledName": "$s6MLYSDK16MLYServerSettingCACycfc",
+            "moduleName": "MLYSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:6MLYSDK16MLYServerSettingV",
-        "mangledName": "$s6MLYSDK16MLYServerSettingV",
+        "declKind": "Class",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYServerSetting",
+        "mangledName": "$s6MLYSDK16MLYServerSettingC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -2127,7 +2550,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6MLYSDK9MLYDriverC7VERSIONSSvpZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cpy)VERSION",
             "mangledName": "$s6MLYSDK9MLYDriverC7VERSIONSSvpZ",
             "moduleName": "MLYSDK",
             "static": true,
@@ -2135,7 +2558,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -2153,13 +2577,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6MLYSDK9MLYDriverC7VERSIONSSvgZ",
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)VERSION",
                 "mangledName": "$s6MLYSDK9MLYDriverC7VERSIONSSvgZ",
                 "moduleName": "MLYSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -2174,15 +2599,20 @@
                 "kind": "TypeNominal",
                 "name": "MLYDriver",
                 "printedName": "MLYSDK.MLYDriver",
-                "usr": "s:6MLYSDK9MLYDriverC"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriver"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6MLYSDK9MLYDriverCACycfc",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(im)init",
             "mangledName": "$s6MLYSDK9MLYDriverCACycfc",
             "moduleName": "MLYSDK",
+            "overriding": true,
+            "objc_name": "init",
             "declAttributes": [
-              "AccessControl"
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
             ],
             "init_kind": "Designated"
           },
@@ -2200,17 +2630,19 @@
                 "kind": "TypeNominal",
                 "name": "MLYDriverOptions",
                 "printedName": "MLYSDK.MLYDriverOptions",
-                "usr": "s:6MLYSDK16MLYDriverOptionsC"
+                "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK9MLYDriverC10initialize7optionsyAA0B7OptionsC_tKFZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)initializeWithOptions:error:",
             "mangledName": "$s6MLYSDK9MLYDriverC10initialize7optionsyAA0B7OptionsC_tKFZ",
             "moduleName": "MLYSDK",
             "static": true,
+            "objc_name": "initializeWithOptions:error:",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -2239,7 +2671,7 @@
                     "kind": "TypeNominal",
                     "name": "MLYDriverOptions",
                     "printedName": "MLYSDK.MLYDriverOptions",
-                    "usr": "s:6MLYSDK16MLYDriverOptionsC"
+                    "usr": "c:@M@MLYSDK@objc(cs)MLYDriverOptions"
                   }
                 ],
                 "typeAttributes": [
@@ -2248,13 +2680,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK9MLYDriverC10initializeyyyAA0B7OptionsCXEKFZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)initializeAndReturnError::",
             "mangledName": "$s6MLYSDK9MLYDriverC10initializeyyyAA0B7OptionsCXEKFZ",
             "moduleName": "MLYSDK",
             "static": true,
+            "objc_name": "initializeAndReturnError::",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -2271,13 +2705,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK9MLYDriverC5readyyyYaFZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)readyWithCompletionHandler:",
             "mangledName": "$s6MLYSDK9MLYDriverC5readyyyYaFZ",
             "moduleName": "MLYSDK",
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2293,13 +2728,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK9MLYDriverC8activateyyKFZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)activateAndReturnError:",
             "mangledName": "$s6MLYSDK9MLYDriverC8activateyyKFZ",
             "moduleName": "MLYSDK",
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -2316,23 +2752,82 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6MLYSDK9MLYDriverC10deactivateyyFZ",
+            "usr": "c:@M@MLYSDK@objc(cs)MLYDriver(cm)deactivate",
             "mangledName": "$s6MLYSDK9MLYDriverC10deactivateyyFZ",
             "moduleName": "MLYSDK",
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:6MLYSDK9MLYDriverC",
+        "usr": "c:@M@MLYSDK@objc(cs)MLYDriver",
         "mangledName": "$s6MLYSDK9MLYDriverC",
         "moduleName": "MLYSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -3483,7 +3978,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/DriverConfigurator.swift",
       "kind": "BooleanLiteral",
-      "offset": 575,
+      "offset": 628,
       "length": 5,
       "value": "false"
     },
@@ -4414,7 +4909,7 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/kernel\/core\/servant\/MCDNDownloadRecorder.swift",
       "kind": "StringLiteral",
-      "offset": 6418,
+      "offset": 6408,
       "length": 23,
       "value": "\"MLYSDK.MeanBandwidthCalculator\""
     },
@@ -6591,28 +7086,28 @@
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "StringLiteral",
-      "offset": 76,
+      "offset": 99,
       "length": 8,
       "value": "\"0.1.13\""
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 1019,
+      "offset": 1090,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 1048,
+      "offset": 1119,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vip\/Downloads\/Github\/p2sp-sdk-avplayer\/Sources\/MLYSDK\/Classes\/driver\/MLYDriver.swift",
       "kind": "BooleanLiteral",
-      "offset": 1076,
+      "offset": 1147,
       "length": 4,
       "value": "true"
     },

@@ -15,12 +15,12 @@ import Sentry
 import Swift
 import _Concurrency
 import _StringProcessing
-public class MLYAVPlayerPlugin {
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYAVPlayerPlugin : ObjectiveC.NSObject {
   public var adapter: MLYSDK.MLYAVPlayerAdapter?
-  public init()
-  public func adapt(_ playerViewController: AVKit.AVPlayerViewController? = nil)
-  public func buildPlayerItem(url: Foundation.URL) throws -> AVFoundation.AVPlayerItem
-  public func play(url: Foundation.URL)
+  @objc override dynamic public init()
+  @objc public func adapt(_ playerViewController: AVKit.AVPlayerViewController? = nil)
+  @objc public func buildPlayerItem(url: Foundation.URL) throws -> AVFoundation.AVPlayerItem
+  @objc public func play(url: Foundation.URL)
   @objc deinit
   @objc public func notifyPlayerItemNewAccessLogEntry()
 }
@@ -28,21 +28,27 @@ public class MLYAVPlayerAdapter {
   public init(_ playerLayer: AVFoundation.AVPlayerLayer? = nil, _ playerViewController: AVKit.AVPlayerViewController? = nil)
   @objc deinit
 }
-public class MLYDriverOptions {
-  public var client: MLYSDK.MLYClientOptions
-  public var server: MLYSDK.MLYServerOptions
-  public var debug: Swift.Bool
-  public init()
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYDriverOptions : ObjectiveC.NSObject {
+  @objc public var client: MLYSDK.MLYClientOptions
+  @objc public var server: MLYSDK.MLYServerOptions
+  @objc public var debug: Swift.Bool
+  @objc override dynamic public init()
   @objc deinit
 }
-public struct MLYClientOptions {
-  public var id: Swift.String?
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYClientOptions : ObjectiveC.NSObject {
+  @objc public var id: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
 }
-public struct MLYServerOptions {
-  public var host: MLYSDK.MLYServerSetting
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYServerOptions : ObjectiveC.NSObject {
+  @objc public var host: MLYSDK.MLYServerSetting
+  @objc override dynamic public init()
+  @objc deinit
 }
-public struct MLYServerSetting {
-  public var fqdn: Swift.String?
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYServerSetting : ObjectiveC.NSObject {
+  @objc public var fqdn: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Point : Swift.Codable, Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -69,16 +75,16 @@ public struct MLYServerSetting {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-public class MLYDriver {
-  public static let VERSION: Swift.String
-  public init()
-  public static func initialize(options: MLYSDK.MLYDriverOptions) throws
-  public static func initialize(_ callback: (MLYSDK.MLYDriverOptions) -> ()) throws
+@objc @_inheritsConvenienceInitializers @objcMembers public class MLYDriver : ObjectiveC.NSObject {
+  @objc public static let VERSION: Swift.String
+  @objc override dynamic public init()
+  @objc public static func initialize(options: MLYSDK.MLYDriverOptions) throws
+  @objc public static func initialize(_ callback: (MLYSDK.MLYDriverOptions) -> ()) throws
   #if compiler(>=5.3) && $AsyncAwait
-  public static func ready() async
+  @objc public static func ready() async
   #endif
-  public static func activate() throws
-  public static func deactivate()
+  @objc public static func activate() throws
+  @objc public static func deactivate()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ProxyURLModifier {

@@ -230,6 +230,7 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #endif
@@ -250,6 +251,66 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+@class AVPlayerViewController;
+@class NSURL;
+@class AVPlayerItem;
+
+SWIFT_CLASS("_TtC6MLYSDK17MLYAVPlayerPlugin")
+@interface MLYAVPlayerPlugin : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)adapt:(AVPlayerViewController * _Nullable)playerViewController;
+- (AVPlayerItem * _Nullable)buildPlayerItemWithUrl:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (void)playWithUrl:(NSURL * _Nonnull)url;
+- (void)notifyPlayerItemNewAccessLogEntry;
+@end
+
+@class NSString;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYClientOptions")
+@interface MLYClientOptions : NSObject
+@property (nonatomic, copy) NSString * _Nullable id;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MLYDriverOptions;
+
+SWIFT_CLASS("_TtC6MLYSDK9MLYDriver")
+@interface MLYDriver : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull VERSION;)
++ (NSString * _Nonnull)VERSION SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (BOOL)initializeWithOptions:(MLYDriverOptions * _Nonnull)options error:(NSError * _Nullable * _Nullable)error;
++ (BOOL)initializeAndReturnError:(NSError * _Nullable * _Nullable)error :(SWIFT_NOESCAPE void (^ _Nonnull)(MLYDriverOptions * _Nonnull))callback;
++ (void)readyWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
++ (BOOL)activateAndReturnError:(NSError * _Nullable * _Nullable)error;
++ (void)deactivate;
+@end
+
+@class MLYServerOptions;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYDriverOptions")
+@interface MLYDriverOptions : NSObject
+@property (nonatomic, strong) MLYClientOptions * _Nonnull client;
+@property (nonatomic, strong) MLYServerOptions * _Nonnull server;
+@property (nonatomic) BOOL debug;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MLYServerSetting;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYServerOptions")
+@interface MLYServerOptions : NSObject
+@property (nonatomic, strong) MLYServerSetting * _Nonnull host;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYServerSetting")
+@interface MLYServerSetting : NSObject
+@property (nonatomic, copy) NSString * _Nullable fqdn;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #endif
 #if defined(__cplusplus)
 #endif
@@ -490,6 +551,7 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #endif
@@ -510,6 +572,66 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+@class AVPlayerViewController;
+@class NSURL;
+@class AVPlayerItem;
+
+SWIFT_CLASS("_TtC6MLYSDK17MLYAVPlayerPlugin")
+@interface MLYAVPlayerPlugin : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)adapt:(AVPlayerViewController * _Nullable)playerViewController;
+- (AVPlayerItem * _Nullable)buildPlayerItemWithUrl:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (void)playWithUrl:(NSURL * _Nonnull)url;
+- (void)notifyPlayerItemNewAccessLogEntry;
+@end
+
+@class NSString;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYClientOptions")
+@interface MLYClientOptions : NSObject
+@property (nonatomic, copy) NSString * _Nullable id;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MLYDriverOptions;
+
+SWIFT_CLASS("_TtC6MLYSDK9MLYDriver")
+@interface MLYDriver : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull VERSION;)
++ (NSString * _Nonnull)VERSION SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (BOOL)initializeWithOptions:(MLYDriverOptions * _Nonnull)options error:(NSError * _Nullable * _Nullable)error;
++ (BOOL)initializeAndReturnError:(NSError * _Nullable * _Nullable)error :(SWIFT_NOESCAPE void (^ _Nonnull)(MLYDriverOptions * _Nonnull))callback;
++ (void)readyWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
++ (BOOL)activateAndReturnError:(NSError * _Nullable * _Nullable)error;
++ (void)deactivate;
+@end
+
+@class MLYServerOptions;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYDriverOptions")
+@interface MLYDriverOptions : NSObject
+@property (nonatomic, strong) MLYClientOptions * _Nonnull client;
+@property (nonatomic, strong) MLYServerOptions * _Nonnull server;
+@property (nonatomic) BOOL debug;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MLYServerSetting;
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYServerOptions")
+@interface MLYServerOptions : NSObject
+@property (nonatomic, strong) MLYServerSetting * _Nonnull host;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6MLYSDK16MLYServerSetting")
+@interface MLYServerSetting : NSObject
+@property (nonatomic, copy) NSString * _Nullable fqdn;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #endif
 #if defined(__cplusplus)
 #endif
