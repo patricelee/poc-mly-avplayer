@@ -38,13 +38,11 @@ self.view.addSubview(self.playerViewController.view)
 ### 2 - initialize  MLYDriver ###
 
 ```swift 
-var options: MLYDriverOptions {
-    let options = MLYDriverOptions()
-    options.client.id = "input id" 
-    return options
-}
 do {
-    try MLYDriver.initialize(options: options)
+    try MLYDriver.initialize { options in
+        options.client.id = client_id
+        options.debug = true
+    }
 } catch {
     print(error)
 }
@@ -64,10 +62,13 @@ self.plugin.adapt(self.playerViewController)
 ```swift 
 func playVideo() {
     let url = URL(string: play_m3u8)!
-    self.playerItem = AVPlayerItem(url: url)
-    self.playerItem.preferredForwardBufferDuration = 15
-    self.player.replaceCurrentItem(with: self.playerItem)
-    self.player.play()
+
+    Task {
+        await MLYDriver.ready()
+        let playerItem = AVPlayerItem(url: url)
+        self.player.replaceCurrentItem(with: playerItem)
+        self.player.play()
+    }
 }
 ```
 

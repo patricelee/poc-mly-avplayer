@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287C49EF29A735FE007FAF9C /* MLYSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 287C49EE29A735FE007FAF9C /* MLYSDK.podspec */; };
 		321339A329764FF700C2CA83 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321339A229764FF700C2CA83 /* PlayerViewController.swift */; };
 		326DD20B2959C95600C50F5B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326DD20A2959C95500C50F5B /* AVFoundation.framework */; };
 		51F30E67CF9FDFBC6CC34225 /* Pods_MLYSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF13F0613B9349A3F0B779B /* Pods_MLYSDK_Example.framework */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287C49EE29A735FE007FAF9C /* MLYSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MLYSDK.podspec; path = ../../MLYSDK.podspec; sourceTree = "<group>"; };
 		321339A229764FF700C2CA83 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		326DD20A2959C95500C50F5B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5218F17CB9E438426CB98820 /* Pods-MLYSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLYSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-MLYSDK_Example/Pods-MLYSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		70A14405C714B7136BF52F65 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		945B015B15476251A7E07B03 /* Pods_MLYSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLYSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF13F0613B9349A3F0B779B /* Pods_MLYSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLYSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9518130EFF28A7DE22DA5CF /* MLYSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLYSDK.podspec; path = ../MLYSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9518130EFF28A7DE22DA5CF /* MLYSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLYSDK.podspec; path = ../MLYSDK.podspec; sourceTree = "<group>"; };
 		C9F72D356C94B548AC47A5BA /* Pods-MLYSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLYSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-MLYSDK_Tests/Pods-MLYSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DE71C260F7DC93FCDDF6F986 /* Pods-MLYSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLYSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-MLYSDK_Example/Pods-MLYSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F03C247F664B2970A532F5A8 /* Pods-MLYSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLYSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MLYSDK_Tests/Pods-MLYSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				287C49EE29A735FE007FAF9C /* MLYSDK.podspec */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for MLYSDK";
@@ -206,6 +209,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				287C49EF29A735FE007FAF9C /* MLYSDK.podspec in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

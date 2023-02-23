@@ -33,28 +33,28 @@ class PlayerViewController: UIViewController {
 
         self.view.layoutIfNeeded()
 
-        self.startDriver()
+        self.setupDriver()
         self.plugin.adapt(self.playerViewController)
     }
 
     @objc func playVideo() {
-        debugPrint("PlayVideo")
-        let url = URL(string: play_m3u8)!
-        self.playerItem = AVPlayerItem(url: url)
-        self.playerItem.preferredForwardBufferDuration = 15
-        self.player.replaceCurrentItem(with: self.playerItem)
-        self.player.play()
+        debugPrint("Play Video")
+        let url = URL(string: "https://vsp-stream.s3.ap-northeast-1.amazonaws.com/HLS/raw/SpaceX.m3u8")!
+        Task {
+            await MLYDriver.ready()
+            let playerItem = AVPlayerItem(url: url)
+            self.player.replaceCurrentItem(with: playerItem)
+            self.player.play()
+        }
     }
 
-    @objc func startDriver() {
-        print("startDriver")
-        var options: MLYDriverOptions {
-            let options = MLYDriverOptions()
-            options.client.id = client_id
-            return options
-        }
+    @objc func setupDriver() {
+        debugPrint("setupDriver")
         do {
-            try MLYDriver.initialize(options: options)
+            try MLYDriver.initialize { options in
+                options.client.id = "cegh8d9j11u91ba1u600"
+                options.debug = false
+            }
         } catch {
             print(error)
         }

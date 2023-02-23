@@ -16,8 +16,11 @@ import Swift
 import _Concurrency
 import _StringProcessing
 public class MLYAVPlayerPlugin {
+  public var adapter: MLYSDK.MLYAVPlayerAdapter?
   public init()
   public func adapt(_ playerViewController: AVKit.AVPlayerViewController? = nil)
+  public func buildPlayerItem(url: Foundation.URL) throws -> AVFoundation.AVPlayerItem
+  public func play(url: Foundation.URL) throws
   @objc deinit
   @objc public func notifyPlayerItemNewAccessLogEntry()
 }
@@ -69,7 +72,11 @@ public struct MLYServerSetting {
 public class MLYDriver {
   public static let VERSION: Swift.String
   public init()
-  public static func initialize(options: MLYSDK.MLYDriverOptions?) throws
+  public static func initialize(options: MLYSDK.MLYDriverOptions) throws
+  public static func initialize(_ callback: (MLYSDK.MLYDriverOptions) -> ()) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func ready() async
+  #endif
   public static func activate() throws
   public static func deactivate()
   @objc deinit
